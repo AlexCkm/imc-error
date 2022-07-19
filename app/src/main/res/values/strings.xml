@@ -2,6 +2,14 @@
     <string name="app_name">IMC</string>
     <string name="Altura">Altura</string>
     <string name="Peso">Peso</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="doscientos">200</string>
+    <string name="Tabla">TABLA IMC</string>
+    <string name="Lila"> Menos de 16.00: Delgadez Severa </string>
+    <string name="AzulOscuro">16.00 – 16.99: Delgadez Moderada </string>
+    <string name="AzulClaro">17.00 – 18.49: Delgadez Leve </string>
+    <string name="VerdeOscuro">18.50 – 24.99: Peso Normal </string>
+    <string name="VerdeClaro">18.50 – 24.99: Preobesidad </string>
+    <string name="Naranja">25.00 – 29.99: Obesidad leve </string>
+    <string name="NaranjaOscura">30.00 – 34.99: Obesidad Media </string>
+    <string name="ROjo">Más de 40.00: Obesidad Mórbida </string>
 </resources>

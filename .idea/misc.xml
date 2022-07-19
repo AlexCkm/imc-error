@@ -3,8 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProyect/IMC/app/src/main/res/drawable/azulclaro.xml" value="0.2985" />
+        <entry key="..\:/AndroidStudioProyect/IMC/app/src/main/res/drawable/azulosc.xml" value="0.2985" />
+        <entry key="..\:/AndroidStudioProyect/IMC/app/src/main/res/drawable/lila.xml" value="0.226" />
+        <entry key="..\:/AndroidStudioProyect/IMC/app/src/main/res/drawable/naranaja.xml" value="0.2985" />
+        <entry key="..\:/AndroidStudioProyect/IMC/app/src/main/res/drawable/naranjaoscuro.xml" value="0.2985" />
+        <entry key="..\:/AndroidStudioProyect/IMC/app/src/main/res/drawable/rojo.xml" value="0.2985" />
+        <entry key="..\:/AndroidStudioProyect/IMC/app/src/main/res/drawable/verdeclaro.xml" value="0.2985" />
+        <entry key="..\:/AndroidStudioProyect/IMC/app/src/main/res/drawable/verdeoscuro.xml" value="0.2985" />
         <entry key="..\:/AndroidStudioProyect/IMC/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
         <entry key="..\:/AndroidStudioProyect/IMC/app/src/main/res/layout/fragment_one.xml" value="0.35597826086956524" />
+        <entry key="..\:/AndroidStudioProyect/IMC/app/src/main/res/layout/tipos_de_peso.xml" value="0.5" />
       </map>
     </option>
   </component>
