@@ -12,4 +12,5 @@
     <string name="Naranja">25.00 – 29.99: Obesidad leve </string>
     <string name="NaranjaOscura">30.00 – 34.99: Obesidad Media </string>
     <string name="ROjo">Más de 40.00: Obesidad Mórbida </string>
+    <string name="Aceptar">Aceptar </string>
 </resources>

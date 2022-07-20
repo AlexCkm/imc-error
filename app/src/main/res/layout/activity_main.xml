@@ -15,16 +15,16 @@
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/imc" />
+        app:srcCompat="@drawable/imc"
+        tools:ignore="ImageContrastCheck" />
 
     <SeekBar
         android:id="@+id/sbPeso"
         android:layout_width="199dp"
         android:layout_height="28dp"
-        android:progress="70"
-        android:scrollbarSize="7dp"
-        android:min="0"
         android:max="150"
+        android:min="0"
+        android:scrollbarSize="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,9 +35,8 @@
         android:id="@+id/sbAltura"
         android:layout_width="195dp"
         android:layout_height="23dp"
-        android:progress="150"
-        android:min="100"
         android:max="200"
+        android:min="100"
         android:scrollbarSize="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,11 +108,11 @@
         app:layout_constraintVertical_bias="0.786" />
 
     <TextView
-        android:id="@+id/tvresultado"
+        android:id="@+id/tvResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="20sp"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
