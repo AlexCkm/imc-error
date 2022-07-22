@@ -69,87 +69,88 @@ class MainActivity : AppCompatActivity() {
         binding.tvResultado.text = IMC.toString()
         calcObesidad()
     }
-    fun calcObesidad(){
-        var msj = when(IMC){
-            in 0.0.. 16.00 -> Snackbar.make(binding.root, "Delgazez severa", Snackbar.LENGTH_LONG).setBackgroundTint(ContextCompat.getColor(this,R.color.Lila))
-                .setAction("Ver Tabla"){
-                    val inflater = this!!.layoutInflater
-                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
-                    AlertDialog.Builder(this!!)
-                        .setView(customLayout)
-                        .setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
-                }.show()
+//    fun calcObesidad(){
+//        var msj = when(IMC){
+//            in 0.0.. 16.00 -> Snackbar.make(binding.root, "Delgazez severa", Snackbar.LENGTH_LONG).setBackgroundTint(ContextCompat.getColor(this,R.color.Lila))
+//                .setAction("Ver Tabla"){
+//                    val inflater = this!!.layoutInflater
+//                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
+//                    AlertDialog.Builder(this!!)
+//                        .setView(customLayout)
+//                        .setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
+//                }.show()
+//
+//
+//
+//            in 16.00.. 16.99 -> Snackbar.make(binding.root, "Delgazez Moderada", Snackbar.LENGTH_LONG)
+//                .setBackgroundTint(ContextCompat.getColor(this,R.color.AzulOscuro))
+//                .setAction("Ver Tabla"){
+//                    val inflater = this!!.layoutInflater
+//                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
+//                    AlertDialog.Builder(this!!)
+//                        .setView(customLayout)
+//                        .setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
+//                }
+//                .show()
+//
+//            in 17.00.. 18.49-> Snackbar.make(binding.root, "Delgadez Leve", Snackbar.LENGTH_LONG)
+//                .setBackgroundTint(ContextCompat.getColor(this,R.color.AzulClaro))
+//                .setAction("Ver Tabla"){
+//                    val inflater = this!!.layoutInflater
+//                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
+//                    AlertDialog.Builder(this!!)
+//                        .setView(customLayout)
+//                        .setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
+//                }
+//                .show()
+//
+//            in 18.50.. 24.99-> Snackbar.make(binding.root, "Peso Normal", Snackbar.LENGTH_LONG)
+//                .setBackgroundTint(ContextCompat.getColor(this,R.color.VerdeOscuro))
+//                .setAction("Ver Tabla"){
+//                    val inflater = this!!.layoutInflater
+//                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
+//                    AlertDialog.Builder(this!!).setView(customLayout).setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
+//                }
+//                .show()
+//
+//            in 25.00.. 29.99-> Snackbar.make(binding.root, "Preobesidad", Snackbar.LENGTH_LONG)
+//                .setBackgroundTint(ContextCompat.getColor(this,R.color.VerdeClaro))
+//                .setAction("Ver Tabla"){
+//                    val inflater = this!!.layoutInflater
+//                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
+//                    AlertDialog.Builder(this!!).setView(customLayout).setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
+//                }
+//                .show()
+//
+//            in 30.00.. 34.99-> Snackbar.make(binding.root, "Obesidad Leve", Snackbar.LENGTH_LONG)
+//                .setBackgroundTint(ContextCompat.getColor(this,R.color.naranja))
+//                .setAction("Ver Tabla"){
+//                    val inflater = this!!.layoutInflater
+//                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
+//                    AlertDialog.Builder(this!!).setView(customLayout).setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
+//                }
+//                .show()
+//
+//            in 35.00.. 40.00-> Snackbar.make(binding.root, "Obesidad Media", Snackbar.LENGTH_LONG)
+//                .setBackgroundTint(ContextCompat.getColor(this,R.color.naranjaOscuro))
+//                .setAction("Ver Tabla"){
+//                    val inflater = this!!.layoutInflater
+//                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
+//                    AlertDialog.Builder(this!!).setView(customLayout).setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
+//                }
+//                .show()
+//
+//            else -> Snackbar.make(binding.root, "Obesidad Mórbida", Snackbar.LENGTH_LONG)
+//                .setBackgroundTint(ContextCompat.getColor(this,R.color.Rojo))
+//                .setAction("Ver Tabla"){
+//                    val inflater = this!!.layoutInflater
+//                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
+//                    AlertDialog.Builder(this!!).setView(customLayout).setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
+//                }.show()
+//
+//
+//        }
 
-
-
-            in 16.00.. 16.99 -> Snackbar.make(binding.root, "Delgazez Moderada", Snackbar.LENGTH_LONG)
-                .setBackgroundTint(ContextCompat.getColor(this,R.color.AzulOscuro))
-                .setAction("Ver Tabla"){
-                    val inflater = this!!.layoutInflater
-                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
-                    AlertDialog.Builder(this!!)
-                        .setView(customLayout)
-                        .setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
-                }
-                .show()
-
-            in 17.00.. 18.49-> Snackbar.make(binding.root, "Delgadez Leve", Snackbar.LENGTH_LONG)
-                .setBackgroundTint(ContextCompat.getColor(this,R.color.AzulClaro))
-                .setAction("Ver Tabla"){
-                    val inflater = this!!.layoutInflater
-                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
-                    AlertDialog.Builder(this!!)
-                        .setView(customLayout)
-                        .setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
-                }
-                .show()
-
-            in 18.50.. 24.99-> Snackbar.make(binding.root, "Peso Normal", Snackbar.LENGTH_LONG)
-                .setBackgroundTint(ContextCompat.getColor(this,R.color.VerdeOscuro))
-                .setAction("Ver Tabla"){
-                    val inflater = this!!.layoutInflater
-                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
-                    AlertDialog.Builder(this!!).setView(customLayout).setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
-                }
-                .show()
-
-            in 25.00.. 29.99-> Snackbar.make(binding.root, "Preobesidad", Snackbar.LENGTH_LONG)
-                .setBackgroundTint(ContextCompat.getColor(this,R.color.VerdeClaro))
-                .setAction("Ver Tabla"){
-                    val inflater = this!!.layoutInflater
-                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
-                    AlertDialog.Builder(this!!).setView(customLayout).setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
-                }
-                .show()
-
-            in 30.00.. 34.99-> Snackbar.make(binding.root, "Obesidad Leve", Snackbar.LENGTH_LONG)
-                .setBackgroundTint(ContextCompat.getColor(this,R.color.naranja))
-                .setAction("Ver Tabla"){
-                    val inflater = this!!.layoutInflater
-                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
-                    AlertDialog.Builder(this!!).setView(customLayout).setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
-                }
-                .show()
-
-            in 35.00.. 40.00-> Snackbar.make(binding.root, "Obesidad Media", Snackbar.LENGTH_LONG)
-                .setBackgroundTint(ContextCompat.getColor(this,R.color.naranjaOscuro))
-                .setAction("Ver Tabla"){
-                    val inflater = this!!.layoutInflater
-                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
-                    AlertDialog.Builder(this!!).setView(customLayout).setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
-                }
-                .show()
-
-            else -> Snackbar.make(binding.root, "Obesidad Mórbida", Snackbar.LENGTH_LONG)
-                .setBackgroundTint(ContextCompat.getColor(this,R.color.Rojo))
-                .setAction("Ver Tabla"){
-                    val inflater = this!!.layoutInflater
-                    val customLayout= inflater.inflate(R.layout.tipos_de_peso,null)
-                    AlertDialog.Builder(this!!).setView(customLayout).setPositiveButton("Aceptar") { dialog, id -> Snackbar.make(binding.root, R.string.Aceptar, Snackbar.LENGTH_SHORT).show()}.show()
-                }.show()
-
-
-        }
 
 
 //        if (IMC < 16.00){
@@ -169,7 +170,42 @@ class MainActivity : AppCompatActivity() {
 //        }else {
 //            Snackbar.make(binding.root, "Obesidad Mórbida", Snackbar.LENGTH_LONG).show()
 //        }
+
+    fun calcObesidad () {
+        var colorSnackbar = when (IMC){
+            in 0.0..15.99 -> ContextCompat.getColor(this, R.color.Lila)
+            in 16.0..16.99 -> ContextCompat.getColor(this, R.color.AzulOscuro)
+            in 17.0..18.49 -> ContextCompat.getColor(this, R.color.AzulClaro)
+            in 18.5..24.99 -> ContextCompat.getColor(this, R.color.VerdeOscuro)
+            in 25.0..29.99 -> ContextCompat.getColor(this, R.color.VerdeClaro)
+            in 30.0..34.99 -> ContextCompat.getColor(this, R.color.naranja)
+            in 35.0..39.99 -> ContextCompat.getColor(this, R.color.naranjaOscuro)
+            else -> ContextCompat.getColor(this, R.color.Rojo)
+        }
+        val obesidad = when (IMC){
+            in 0.0..15.99 -> "DELGADEZ SEVERA"
+            in 16.0..16.99 -> "DELGADEZ MODERADA"
+            in 17.0..18.49 -> "DELGADEZ LEVE"
+            in 18.5..24.99 -> "NORMAL"
+            in 25.0..29.99 -> "PREOBESIDAD"
+            in 30.0..34.99 -> "OBESIDAD LEVE"
+            in 35.0..39.99 -> "OBESIDAD MEDIA"
+            else -> "OBESIDAD MÓRBIDA"
+        }
+        val sb = Snackbar.make(binding.root, obesidad, Snackbar.LENGTH_LONG)
+        sb.setTextColor(Color.WHITE)
+        sb.setBackgroundTint(colorSnackbar)
+        sb.setActionTextColor(Color.DKGRAY)
+        sb.setAction("Ver Tabla"){
+            showTable()
+        }
+        sb.show()
+    }
+    fun showTable(){
+        val dialog = zzzz()
+        dialog.show(supportFragmentManager, "TablaPeso")
     }
 }
+
 
 
